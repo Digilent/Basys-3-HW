@@ -10,7 +10,7 @@ Each demo contained in this repository is documented on the Digilent Wiki, links
 |-----------|-------------|
 | [Basys 3 Abacus Demo](https://reference.digilentinc.com/reference/programmable-logic/basys-3/demos/abacus) |  The Abacus demo can perform one of four arithmetic functions on two 8-bit numbers  |
 | [Basys 3 General I/O Demo](https://reference.digilentinc.com/reference/programmable-logic/basys-3/demos/gpio) |  This demo uses the Basys 3's switches, LEDs, pushbuttons, seven-segment display, VGA connector, USB HID Host port and USB UART bridge  |
-| [Basys 3 Keyboard Demo](https://reference.digilentinc.com/reference/programmable-logic/basys-3/demos/keyboard) |  When a button is pressed/released, the value of the scan code will be converted to ASCII and transmitted to the terminal |
+| [Basys 3 Keyboard Demo](https://reference.digilentinc.com/reference/programmable-logic/basys-3/demos/keyboard) |  When a keyboard button is pressed/released, the value of the scan code will be converted to ASCII and transmitted to the terminal |
 | [Basys 3 XADC Analog to Digital Converter Demo](https://reference.digilentinc.com/reference/programmable-logic/basys-3/demos/xadc) |   The 7-Segment display shows the current voltage across the selected XADC pins and the LEDs turn on from right to left as the input voltage increases. |
 
 ## Repository Description
