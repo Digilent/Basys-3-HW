@@ -148,10 +148,10 @@ module XADCdemo(
       
     always @(posedge(CLK100MHZ)) begin
         case(sw)
-        0: Address_in <= 8'h16;
-        1: Address_in <= 8'h17;
-        2: Address_in <= 8'h1e;
-        3: Address_in <= 8'h1f;
+        0: Address_in <= 8'h16; // XA1/AD6
+        1: Address_in <= 8'h1e; // XA2/AD14
+        2: Address_in <= 8'h17; // XA3/AD7
+        3: Address_in <= 8'h1f; // XA4/AD15
         endcase
     end
     
