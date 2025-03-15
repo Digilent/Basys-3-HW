@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="top_sim_pass_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="top_sim_pass_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="878.833 ns"></ZoomStartTime>
+      <ZoomEndTime time="1,024.234 ns"></ZoomEndTime>
+      <Cursor1Time time="1,000.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="206"></NameColumnWidth>
+      <ValueColumnWidth column_width="183"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="4" />
+   <wvobject fp_name="group272" type="group">
+      <obj_property name="label">Counters</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/top_sim_pass_tb/dut/clk" type="logic">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_sim_pass_tb/dut/ten_hz_inst/count_out" type="array">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">count_out[31:0]</obj_property>
+         <obj_property name="ObjectShortName">count_out[31:0]</obj_property>
+         <obj_property name="label">ten_hz_count_out[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_sim_pass_tb/dut/digits" type="array">
+         <obj_property name="ElementShortName">digits[15:0]</obj_property>
+         <obj_property name="ObjectShortName">digits[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_sim_pass_tb/dut/digit_select_inst/count_out" type="array">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">count_out[1:0]</obj_property>
+         <obj_property name="ObjectShortName">count_out[1:0]</obj_property>
+         <obj_property name="label">digit_select[1:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_sim_pass_tb/dut/active_digit" type="array">
+         <obj_property name="ElementShortName">active_digit[3:0]</obj_property>
+         <obj_property name="ObjectShortName">active_digit[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_sim_pass_tb/dut/an" type="array">
+         <obj_property name="ElementShortName">an[3:0]</obj_property>
+         <obj_property name="ObjectShortName">an[3:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group12" type="group">
+      <obj_property name="label">BCD</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/top_sim_pass_tb/dut/digits" type="array">
+         <obj_property name="ElementShortName">digits[15:0]</obj_property>
+         <obj_property name="ObjectShortName">digits[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_sim_pass_tb/dut/bcd_clear" type="logic">
+         <obj_property name="ElementShortName">bcd_clear</obj_property>
+         <obj_property name="ObjectShortName">bcd_clear</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_sim_pass_tb/dut/bcd_enable" type="logic">
+         <obj_property name="ElementShortName">bcd_enable</obj_property>
+         <obj_property name="ObjectShortName">bcd_enable</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group28" type="group">
+      <obj_property name="label">LEDs</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/top_sim_pass_tb/dut/timer_carry" type="logic">
+         <obj_property name="ElementShortName">timer_carry</obj_property>
+         <obj_property name="ObjectShortName">timer_carry</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_sim_pass_tb/dut/timer_enable" type="logic">
+         <obj_property name="ElementShortName">timer_enable</obj_property>
+         <obj_property name="ObjectShortName">timer_enable</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_sim_pass_tb/dut/timer_decrement" type="logic">
+         <obj_property name="ElementShortName">timer_decrement</obj_property>
+         <obj_property name="ObjectShortName">timer_decrement</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_sim_pass_tb/dut/timer_count" type="array">
+         <obj_property name="ElementShortName">timer_count[4:0]</obj_property>
+         <obj_property name="ObjectShortName">timer_count[4:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_sim_pass_tb/dut/led" type="array">
+         <obj_property name="ElementShortName">led[15:0]</obj_property>
+         <obj_property name="ObjectShortName">led[15:0]</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group43" type="group">
+      <obj_property name="label">FSM</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/top_sim_pass_tb/dut/timer_inst/reset" type="logic">
+         <obj_property name="ElementShortName">reset</obj_property>
+         <obj_property name="ObjectShortName">reset</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_sim_pass_tb/dut/timer_inst/start" type="logic">
+         <obj_property name="ElementShortName">start</obj_property>
+         <obj_property name="ObjectShortName">start</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_sim_pass_tb/dut/timer_inst/stop" type="logic">
+         <obj_property name="ElementShortName">stop</obj_property>
+         <obj_property name="ObjectShortName">stop</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_sim_pass_tb/dut/timer_inst/strobe" type="logic">
+         <obj_property name="ElementShortName">strobe</obj_property>
+         <obj_property name="ObjectShortName">strobe</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_sim_pass_tb/dut/timer_inst/timer_carry" type="logic">
+         <obj_property name="ElementShortName">timer_carry</obj_property>
+         <obj_property name="ObjectShortName">timer_carry</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_sim_pass_tb/dut/timer_inst/timer_enable" type="logic">
+         <obj_property name="ElementShortName">timer_enable</obj_property>
+         <obj_property name="ObjectShortName">timer_enable</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_sim_pass_tb/dut/ten_hz_clear" type="logic">
+         <obj_property name="ElementShortName">ten_hz_clear</obj_property>
+         <obj_property name="ObjectShortName">ten_hz_clear</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_sim_pass_tb/dut/timer_inst/bcd_clear" type="logic">
+         <obj_property name="ElementShortName">bcd_clear</obj_property>
+         <obj_property name="ObjectShortName">bcd_clear</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_sim_pass_tb/dut/timer_inst/bcd_enable" type="logic">
+         <obj_property name="ElementShortName">bcd_enable</obj_property>
+         <obj_property name="ObjectShortName">bcd_enable</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_sim_pass_tb/dut/timer_inst/timer_decrement" type="logic">
+         <obj_property name="ElementShortName">timer_decrement</obj_property>
+         <obj_property name="ObjectShortName">timer_decrement</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_sim_pass_tb/dut/timer_inst/state" type="array">
+         <obj_property name="ElementShortName">state[31:0]</obj_property>
+         <obj_property name="ObjectShortName">state[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_sim_pass_tb/dut/timer_inst/blink_done" type="logic">
+         <obj_property name="ElementShortName">blink_done</obj_property>
+         <obj_property name="ObjectShortName">blink_done</obj_property>
+      </wvobject>
+   </wvobject>
+</wave_config>

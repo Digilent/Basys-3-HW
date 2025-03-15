@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="late_fail_sim_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="late_fail_sim_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000000 us"></ZoomStartTime>
+      <ZoomEndTime time="39.500001 us"></ZoomEndTime>
+      <Cursor1Time time="21.020000 us"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="206"></NameColumnWidth>
+      <ValueColumnWidth column_width="183"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="4" />
+   <wvobject fp_name="group49" type="group">
+      <obj_property name="label">TB</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/late_fail_sim_tb/clk" type="logic">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/late_fail_sim_tb/reset" type="logic">
+         <obj_property name="ElementShortName">reset</obj_property>
+         <obj_property name="ObjectShortName">reset</obj_property>
+      </wvobject>
+      <wvobject fp_name="/late_fail_sim_tb/start_btn" type="logic">
+         <obj_property name="ElementShortName">start_btn</obj_property>
+         <obj_property name="ObjectShortName">start_btn</obj_property>
+      </wvobject>
+      <wvobject fp_name="/late_fail_sim_tb/stop_btn" type="logic">
+         <obj_property name="ElementShortName">stop_btn</obj_property>
+         <obj_property name="ObjectShortName">stop_btn</obj_property>
+      </wvobject>
+      <wvobject fp_name="/late_fail_sim_tb/an" type="array">
+         <obj_property name="ElementShortName">an[3:0]</obj_property>
+         <obj_property name="ObjectShortName">an[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/late_fail_sim_tb/seg" type="array">
+         <obj_property name="ElementShortName">seg[6:0]</obj_property>
+         <obj_property name="ObjectShortName">seg[6:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/late_fail_sim_tb/dp" type="logic">
+         <obj_property name="ElementShortName">dp</obj_property>
+         <obj_property name="ObjectShortName">dp</obj_property>
+      </wvobject>
+      <wvobject fp_name="/late_fail_sim_tb/led" type="array">
+         <obj_property name="ElementShortName">led[15:0]</obj_property>
+         <obj_property name="ObjectShortName">led[15:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group65" type="group">
+      <obj_property name="label">FSM</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/late_fail_sim_tb/dut/timer_inst/clk" type="logic">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/late_fail_sim_tb/dut/timer_inst/reset" type="logic">
+         <obj_property name="ElementShortName">reset</obj_property>
+         <obj_property name="ObjectShortName">reset</obj_property>
+      </wvobject>
+      <wvobject fp_name="/late_fail_sim_tb/dut/timer_inst/start" type="logic">
+         <obj_property name="ElementShortName">start</obj_property>
+         <obj_property name="ObjectShortName">start</obj_property>
+      </wvobject>
+      <wvobject fp_name="/late_fail_sim_tb/dut/timer_inst/stop" type="logic">
+         <obj_property name="ElementShortName">stop</obj_property>
+         <obj_property name="ObjectShortName">stop</obj_property>
+      </wvobject>
+      <wvobject fp_name="/late_fail_sim_tb/dut/timer_inst/strobe" type="logic">
+         <obj_property name="ElementShortName">strobe</obj_property>
+         <obj_property name="ObjectShortName">strobe</obj_property>
+      </wvobject>
+      <wvobject fp_name="/late_fail_sim_tb/dut/timer_inst/timer_enable" type="logic">
+         <obj_property name="ElementShortName">timer_enable</obj_property>
+         <obj_property name="ObjectShortName">timer_enable</obj_property>
+      </wvobject>
+      <wvobject fp_name="/late_fail_sim_tb/dut/timer_inst/timer_carry" type="logic">
+         <obj_property name="ElementShortName">timer_carry</obj_property>
+         <obj_property name="ObjectShortName">timer_carry</obj_property>
+      </wvobject>
+      <wvobject fp_name="/late_fail_sim_tb/dut/timer_inst/timer_decrement" type="logic">
+         <obj_property name="ElementShortName">timer_decrement</obj_property>
+         <obj_property name="ObjectShortName">timer_decrement</obj_property>
+      </wvobject>
+      <wvobject fp_name="/late_fail_sim_tb/dut/timer_inst/bcd_clear" type="logic">
+         <obj_property name="ElementShortName">bcd_clear</obj_property>
+         <obj_property name="ObjectShortName">bcd_clear</obj_property>
+      </wvobject>
+      <wvobject fp_name="/late_fail_sim_tb/dut/timer_inst/bcd_enable" type="logic">
+         <obj_property name="ElementShortName">bcd_enable</obj_property>
+         <obj_property name="ObjectShortName">bcd_enable</obj_property>
+      </wvobject>
+      <wvobject fp_name="/late_fail_sim_tb/dut/timer_inst/ten_hz_clear" type="logic">
+         <obj_property name="ElementShortName">ten_hz_clear</obj_property>
+         <obj_property name="ObjectShortName">ten_hz_clear</obj_property>
+      </wvobject>
+      <wvobject fp_name="/late_fail_sim_tb/dut/timer_inst/blink_done" type="logic">
+         <obj_property name="ElementShortName">blink_done</obj_property>
+         <obj_property name="ObjectShortName">blink_done</obj_property>
+      </wvobject>
+      <wvobject fp_name="/late_fail_sim_tb/dut/timer_inst/blink_enable" type="logic">
+         <obj_property name="ElementShortName">blink_enable</obj_property>
+         <obj_property name="ObjectShortName">blink_enable</obj_property>
+      </wvobject>
+      <wvobject fp_name="/late_fail_sim_tb/dut/timer_inst/blink_count" type="array">
+         <obj_property name="ElementShortName">blink_count[3:0]</obj_property>
+         <obj_property name="ObjectShortName">blink_count[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/late_fail_sim_tb/dut/timer_inst/state" type="array">
+         <obj_property name="ElementShortName">state[31:0]</obj_property>
+         <obj_property name="ObjectShortName">state[31:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group74" type="group">
+      <obj_property name="label">TIMER</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/late_fail_sim_tb/dut/led_timer_inst/clk" type="logic">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/late_fail_sim_tb/dut/led_timer_inst/reset" type="logic">
+         <obj_property name="ElementShortName">reset</obj_property>
+         <obj_property name="ObjectShortName">reset</obj_property>
+      </wvobject>
+      <wvobject fp_name="/late_fail_sim_tb/dut/led_timer_inst/enable" type="logic">
+         <obj_property name="ElementShortName">enable</obj_property>
+         <obj_property name="ObjectShortName">enable</obj_property>
+      </wvobject>
+      <wvobject fp_name="/late_fail_sim_tb/dut/led_timer_inst/decrement" type="logic">
+         <obj_property name="ElementShortName">decrement</obj_property>
+         <obj_property name="ObjectShortName">decrement</obj_property>
+      </wvobject>
+      <wvobject fp_name="/late_fail_sim_tb/dut/led_timer_inst/high_count" type="array">
+         <obj_property name="ElementShortName">high_count[4:0]</obj_property>
+         <obj_property name="ObjectShortName">high_count[4:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/late_fail_sim_tb/dut/led_timer_inst/count_out" type="array">
+         <obj_property name="ElementShortName">count_out[4:0]</obj_property>
+         <obj_property name="ObjectShortName">count_out[4:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/late_fail_sim_tb/dut/led_timer_inst/carry_out" type="logic">
+         <obj_property name="ElementShortName">carry_out</obj_property>
+         <obj_property name="ObjectShortName">carry_out</obj_property>
+      </wvobject>
+      <wvobject fp_name="/late_fail_sim_tb/dut/led_timer_inst/width" type="array">
+         <obj_property name="ElementShortName">width[31:0]</obj_property>
+         <obj_property name="ObjectShortName">width[31:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="/late_fail_sim_tb/dut/led" type="array">
+      <obj_property name="ElementShortName">led[15:0]</obj_property>
+      <obj_property name="ObjectShortName">led[15:0]</obj_property>
+   </wvobject>
+</wave_config>
