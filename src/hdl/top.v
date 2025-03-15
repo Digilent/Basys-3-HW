@@ -18,18 +18,15 @@ module top #(
     wire        ten_hz_strobe;
     wire [1:0]  digit_select;
     wire [15:0] digits;
-    wire        clear_timer;
     reg  [3:0]  active_digit;
-    wire        start_clean, stop_clean, increment_clean, decrement_clean;
+    wire        start_clean, stop_clean;
     wire        bcd_clear;
     
-    wire        leds_full;
-    wire        leds_empty;
-    wire        timer_clear;
+    wire        timer_carry;
     wire        timer_toggle;
     wire        timer_enable;
-    wire        fill_from_right;
     reg  [15:0] led_timer;
+    wire        ten_hz_clear;
     
     debouncer #(
         .noise_period   (button_noise_period)
@@ -55,7 +52,6 @@ module top #(
         .clk            (clk),
         .reset          (1'b0),
         .enable         (1'b1),
-        .decrement      (1'b0),
         .high_count     (clk_freq / 1000 - 1),
         .count_out      (),
         .carry_out      (khz_strobe)
@@ -65,9 +61,8 @@ module top #(
         .width  (32)
     ) ten_hz_inst (
         .clk            (clk),
-        .reset          (reset),
+        .reset          (reset | ten_hz_clear),
         .enable         (khz_strobe),
-        .decrement      (1'b0),
         .high_count     (99),
         .count_out      (),
         .carry_out      (ten_hz_tc)
@@ -82,7 +77,6 @@ module top #(
         .clk        (clk),
         .reset      (reset | bcd_clear),
         .enable     (bcd_enable),
-        .decrement  (1'b0),
         .digits     (digits)
     );
     
@@ -92,7 +86,6 @@ module top #(
         .clk            (clk),
         .reset          (1'b0),
         .enable         (khz_strobe),
-        .decrement      (1'b0),
         .high_count     (2'd3),
         .count_out      (digit_select),
         .carry_out      ()
@@ -120,39 +113,55 @@ module top #(
     // drive decimal point only on digit one, since we're counting tenths of seconds
     assign dp = an[1];
     
-    timer_fsm timer_inst (
+    timer_fsm_sv timer_inst (
         .clk                (clk),
         .reset              (reset),
         .start              (start_clean),
         .stop               (stop_clean),
         .strobe             (ten_hz_strobe),
-        .timer_clear        (timer_clear),
-        .timer_toggle       (timer_toggle),
         .timer_enable       (timer_enable),
-        .leds_full          (leds_full),
-        .leds_empty         (leds_empty),
+        .timer_carry        (timer_carry),
+        .timer_decrement    (timer_decrement),
         .bcd_clear          (bcd_clear),
         .bcd_enable         (bcd_enable),
-        .fill_from_right    (fill_from_right)
+        .ten_hz_clear       (ten_hz_clear)
     );
 
-    always @(posedge clk) begin
-        if (reset) begin
-            led_timer <= 'b0;
-        end else if (timer_clear) begin
-            led_timer <= 'b0;
-        end else if (timer_enable) begin
-            if (timer_toggle) begin
-                led_timer <= ~led_timer;
-            end else if (fill_from_right) begin
-                led_timer <= {led_timer[14:0], 1'b1};
-            end else begin
-                led_timer <= {1'b0, led_timer[15:1]};
-            end
-        end
+    wire [4:0] timer_count;
+    updown_counter #(
+        .width(5)
+    ) led_timer_inst (
+        .clk        (clk),
+        .reset      (reset),
+        .enable     (timer_enable),
+        .decrement  (timer_decrement),
+        .high_count (5'h10),
+        .count_out  (timer_count),
+        .carry_out  (timer_carry)
+    );
+
+    always @(*) begin
+        case (timer_count)
+        5'h00: led_timer = 16'h0000;
+        5'h01: led_timer = 16'h0001;
+        5'h02: led_timer = 16'h0003;
+        5'h03: led_timer = 16'h0007;
+        5'h04: led_timer = 16'h000f;
+        5'h05: led_timer = 16'h001f;
+        5'h06: led_timer = 16'h003f;
+        5'h07: led_timer = 16'h007f;
+        5'h08: led_timer = 16'h00ff;
+        5'h09: led_timer = 16'h01ff;
+        5'h0a: led_timer = 16'h03ff;
+        5'h0b: led_timer = 16'h07ff;
+        5'h0c: led_timer = 16'h0fff;
+        5'h0d: led_timer = 16'h1fff;
+        5'h0e: led_timer = 16'h3fff;
+        5'h0f: led_timer = 16'h7fff;
+        5'h10: led_timer = 16'hffff;
+        default: led_timer = 16'h0000;
+        endcase
     end
     
-    assign leds_full = &led_timer;
-    assign leds_empty = ~|led_timer;
     assign led = led_timer;
 endmodule

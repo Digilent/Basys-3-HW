@@ -6,7 +6,7 @@ module debouncer #(
     input clk,
     input reset,
     input data_in,
-    output reg data_out
+    output reg data_out = 0
 );
     wire enable = (data_in != data_out);
     wire carry_out;
@@ -17,7 +17,6 @@ module debouncer #(
         .clk(clk),
         .reset(reset),
         .enable(enable),
-        .decrement(1'b0),
         .high_count(noise_period-1),
         .count_out(),
         .carry_out(carry_out)
