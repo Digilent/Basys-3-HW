@@ -51,6 +51,7 @@ src/ip/*/**
 # hardware handoff
 hw_handoff/*
 !hw_handoff/*.xsa
+!hw_handoff/*.bit
 
 # maintain required directories
 !**/.keep
